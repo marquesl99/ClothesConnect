@@ -1,0 +1,211 @@
+/*Globals*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.4;
+  color: #333;
+  background-color: #2196f3;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  color: #2196f3;
+}
+
+a {
+  text-decoration: none;
+  color: #2196f3;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1976d2;
+}
+
+/*Header*/
+
+header {
+  align-items: center;
+  padding: 50px;
+  background-color: #2196f3;
+  color: #fff;
+  background-image: url(imgs/header_bg_clothesconnect.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+img {
+  width: 180px;
+  height: 180px;
+}
+
+header h1 {
+  align-items: center;
+  font-size: 34px;
+  color: #fffefe;
+}
+
+header p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/*Nav*/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: #2196f3;
+}
+
+nav a {
+  margin: 0 20px;
+  color: #fff;
+}
+
+nav a:hover {
+  color: #0080ff;
+}
+
+/*Main*/
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+section {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-top: 0;
+}
+
+/*Como Funciona*/
+
+#como-funciona {
+  grid-column: 1 / -1;
+}
+
+#como-funciona h2 {
+  margin-bottom: 20px;
+}
+
+#como-funciona p {
+  margin-bottom: 20px;
+}
+
+/*Doar Roupas e Receber Roupas*/
+
+#doar-roupas,
+#receber-roupas {
+  grid-column: 1 / -1;
+  display: inline;
+}
+
+#doar-roupas form,
+#receber-roupas form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#doar-roupas label,
+#receber-roupas label {
+  margin-bottom: 10px;
+}
+
+#doar-roupas select,
+#receber-roupas select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#doar-roupas textarea,
+#receber-roupas textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  resize: vertical;
+}
+
+#doar-roupas input[type="submit"],
+#receber-roupas input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2196f3;
+  color: #fff;
+  cursor: pointer;
+}
+
+#doar-roupas input[type="submit"]:hover,
+#receber-roupas input[type="submit"]:hover {
+  background-color: #1976d2;
+}
+
+/*Formulários*/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 40%;
+  background-color: #fff;
+  border: 2px solid #1976d2;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/*Sobre Nós, Políticas e FAQ*/
+
+#sobre-nos,
+#politicas,
+#faq {
+  grid-column: 1 / -1;
+}
+
+#sobre-nos p,
+#politicas p,
+#faq li {
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #2196f3;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+
+footer p {
+  margin: 0;
+}

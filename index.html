@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClothesConnect</title>
+  <script src="validacao.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <img src="imgs/logo_clothesconnect.png" alt="Logo" />
+    <h1>Bem-vindo ao ClothesConnect</h1>
+    <p>Uma plataforma para doação de roupas usadas</p>
+  </header>
+  <nav>
+    <a href="#como-funciona">Como Funciona</a> |
+    <a href="#doar-roupas">Doar Roupas</a> |
+    <a href="#sobre-nos">Sobre Nós</a> |
+    <a href="#politicas">Políticas e Privacidade</a> |
+    <a href="#faq">FAQ</a>
+  </nav>
+  <main>
+    <section id="como-funciona">
+      <h2>Como Funciona</h2>
+      <h4>Doação de Roupas</h4>
+      <p>
+        1. Preencha o formulário de doação, selecionando o tipo de roupa,
+        tamanho e estado de conservação.
+      </p>
+      <p>2. Coloque seu endereço, para nossa equipe buscar as roupas</p>
+      <p>3. Envie a sua doação.</p>
+    </section>
+    <section id="doar-roupas">
+      <h2>Doar Roupas</h2>
+      <p>Formulário de doação de roupas.</p>
+      <form name="doacao" action="http://localhost:8080/formulario/validacao.jsp" method="post"
+        onsubmit="return validarDoacao()">
+        <label for="tipo-doacao">Tipo de Roupa:</label>
+        <select name="tipo" id="tipo-doacao" name="tipo-doacao" required>
+          <option disabled selected hidden="">Selecione</option>
+          <option value="camiseta">Camiseta</option>
+          <option value="calca">Calça</option>
+          <option value="vestido">Vestido</option>
+          <option value="agasalho">Agasalho</option>
+          <option value="bermuda">Bermuda</option>
+          <option value="regata">Regata</option>
+        </select><br />
+
+        <label for="tamanho-doacao">Tamanho:</label>
+        <select name="tamanho" id="tamanho-doacao" required>
+          <option disabled selected hidden="">Selecione</option>
+          <option value="PP">PP</option>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+          <option value="GG">GG</option>
+          <option value="EXG">EXG</option>
+        </select><br />
+
+        <label>Estado de Conservação:</label>
+        <select name="estado" id="estado-conservacao" required>
+          <option disabled selected hidden="">Selecione</option>
+          <option value="novo">Novo</option>
+          <option value="seminovo">Seminovo</option>
+          <option value="usado">Usado</option>
+        </select><br />
+
+        <label for="descricao-doacao">Endereço:</label><br />
+        <textarea name="descricao" id="descricao-doacao" rows="4" cols="50"></textarea><br />
+
+        <div class="form-buttons">
+          <input type="submit" value="Enviar Doação" />
+        </div>
+      </form>
+    </section>
+
+    <section id="sobre-nos">
+      <h2>Sobre Nós</h2>
+      <p>
+        Bem-vindo ao nosso espaço dedicado à solidariedade e ao amor ao
+        próximo. Somos uma equipe comprometida com a missão de fazer a
+        diferença na vida das pessoas através da doação de roupas.
+      </p>
+      <h2>Quem Somos</h2>
+      <p>
+        Nós somos um grupo de voluntários apaixonados que acreditam que cada
+        pequeno gesto pode gerar um impacto positivo no mundo. Movidos pelo
+        desejo de ajudar, unimos forças para criar esta plataforma de doação
+        de roupas, onde cada peça doada é um ato de generosidade que aquece o
+        coração de quem recebe.
+      </p>
+      <h2>Nossa Missão</h2>
+      <p>
+        Nossa missão é simples: espalhar calor humano através de roupas.
+        Acreditamos que todos merecem sentir-se confortáveis, dignos e
+        confiantes. Ao doar roupas, estamos não apenas fornecendo itens
+        essenciais, mas também transmitindo amor e esperança para aqueles que
+        mais precisam.
+      </p>
+      <h2>O que fazemos</h2>
+      <p>
+        Aqui, nós facilitamos a doação de roupas de forma fácil e conveniente.
+        Recebemos doações de pessoas como você, que compartilham nosso
+        compromisso com a solidariedade. Depois, garantimos que essas roupas
+        cheguem a quem mais precisa, seja em abrigos, comunidades carentes ou
+        para pessoas em situações de vulnerabilidade.
+      </p>
+      <h2>Como Você Pode Ajudar</h2>
+      <p>
+        Você também pode fazer parte desta corrente do bem! Seja doando roupas
+        que não utiliza mais, divulgando nossa causa ou até mesmo
+        voluntariando-se para ajudar na organização e distribuição. Cada gesto
+        conta e faz toda a diferença. Junte-se a nós e faça parte desta
+        jornada de amor e compaixão. Juntos, podemos aquecer corações e vestir
+        o mundo com solidariedade.
+      </p>
+    </section>
+    <section id="politicas">
+      <h2>Políticas e Privacidade</h2>
+      <h4>Termos de Uso</h4>
+      <p>
+        <strong>1. Aceitação dos Termos:</strong> Ao utilizar os serviços do
+        ClothesConnect, você concorda com estes Termos de Uso. Se você não
+        concorda com estes termos, por favor, não use nossos serviços.
+      </p>
+      <p>
+        <strong>2. Uso dos Serviços:</strong> O ClothesConnect é uma
+        plataforma destinada à doação e recebimento de roupas usadas. Você
+        concorda em usar nossos serviços de acordo com a lei aplicável e de
+        forma ética. Você não pode usar nossos serviços para atividades
+        ilegais, fraudulentas ou prejudiciais.
+      </p>
+      <p>
+        <strong>3. Responsabilidade:</strong> O ClothesConnect não se
+        responsabiliza por transações realizadas entre usuários. Recomendamos
+        que todas as transações sejam feitas com cuidado e consideração. Além
+        disso, não garantimos a qualidade, precisão ou disponibilidade das
+        doações anunciadas em nossa plataforma.
+      </p>
+      <p>
+        <strong>4. Propriedade Intelectual:</strong> Todos os direitos
+        autorais, marcas registradas e outros direitos de propriedade
+        intelectual relacionados ao ClothesConnect são de propriedade da
+        empresa. Você concorda em não reproduzir, distribuir ou modificar
+        qualquer parte de nossos serviços sem nossa permissão.
+      </p>
+      <p>
+        <strong>5. Modificações nos Termos:</strong> Reservamo-nos o direito
+        de modificar estes Termos de Uso a qualquer momento. Quaisquer
+        alterações serão comunicadas através de nossa plataforma. O uso
+        contínuo de nossos serviços após tais modificações constitui sua
+        aceitação dos novos termos.
+      </p>
+      <p>
+        <strong>6. Encerramento do Serviço:</strong> Reservamo-nos o direito
+        de encerrar ou suspender sua conta e acesso aos nossos serviços a
+        qualquer momento, por qualquer motivo, sem aviso prévio.
+      </p>
+      <br />
+
+      <h4>Política de Privacidade</h4>
+      <p>
+        <strong>1. Coleta de Informações:</strong> Podemos coletar informações
+        pessoais que você fornece voluntariamente ao usar nossos serviços,
+        como nome, endereço de e-mail, e informações de contato. Além disso,
+        podemos coletar informações de forma automática, como endereço IP,
+        tipo de navegador e dados de uso.
+      </p>
+      <p>
+        <strong>2. Uso de Informações:</strong> Utilizamos suas informações
+        pessoais para fornecer e melhorar nossos serviços, responder a
+        solicitações, personalizar sua experiência e enviar comunicações
+        relacionadas ao ClothesConnect.
+      </p>
+      <p>
+        <strong>3. Compartilhamento de Informações:</strong> Não
+        compartilhamos suas informações pessoais com terceiros, exceto quando
+        necessário para fornecer nossos serviços ou quando exigido por lei.
+      </p>
+      <p>
+        <strong>4. Segurança das Informações:</strong> Empregamos medidas de
+        segurança para proteger suas informações pessoais contra acesso não
+        autorizado ou uso indevido.
+      </p>
+      <p>
+        <strong>5. Cookies:</strong> Podemos usar cookies e outras tecnologias
+        de rastreamento para melhorar a experiência do usuário e coletar
+        informações sobre o uso de nossos serviços.
+      </p>
+      <p>
+        <strong>6. Alterações na Política de Privacidade:</strong>
+        Reservamo-nos o direito de modificar esta Política de Privacidade a
+        qualquer momento. Quaisquer alterações serão publicadas em nossa
+        plataforma.
+      </p>
+      <p>
+        Ao usar o ClothesConnect, você concorda com esta Política de
+        Privacidade. Se você tiver alguma dúvida ou preocupação sobre nossas
+        práticas de privacidade, entre em contato conosco.
+      </p>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <ol>
+        <li>
+          <strong>Como faço para doar roupas através do ClothesConnect?</strong><br />
+          Você pode doar roupas facilmente através do ClothesConnect. Basta
+          criar uma conta, clicar no botão de doação e seguir as instruções
+          para listar as peças que deseja doar. Os interessados poderão entrar
+          em contato com você para combinar a entrega.
+        </li>
+        <li>
+          <strong>O ClothesConnect cobra alguma taxa pelas transações?</strong><br />
+          Não. O ClothesConnect é uma plataforma gratuita. Não cobramos
+          nenhuma taxa pelas transações realizadas em nossa plataforma.
+        </li>
+        <li>
+          <strong>Quais tipos de roupas posso doar através do
+            ClothesConnect?</strong><br />
+          Aceitamos uma ampla variedade de roupas, incluindo roupas de todos
+          os tamanhos, estilos e condições. Desde roupas infantis até roupas
+          para adultos, todas as doações são bem-vindas, desde que estejam em
+          boas condições para uso.
+        </li>
+        <li>
+          <strong>Como o ClothesConnect protege minhas informações
+            pessoais?</strong><br />
+          No ClothesConnect, levamos a segurança e privacidade dos seus dados
+          muito a sério. Utilizamos medidas de segurança robustas para
+          proteger suas informações pessoais e não compartilhamos seus dados
+          com terceiros sem sua permissão. Para mais detalhes, consulte nossa
+          Política de Privacidade.
+        </li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 ClothesConnect. Todos os direitos reservados.</p>
+  </footer>
+</body>
+
+</html>
